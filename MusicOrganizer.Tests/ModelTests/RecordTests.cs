@@ -20,5 +20,14 @@ namespace MusicOrganizer.Tests
       Record newRecord = new Record("test");
       Assert.AreEqual(typeof(Record), newRecord.GetType());
     }
+
+    [TestMethod]
+    public void Record_ReturnRecordTitle_String()
+    {
+      string recordTitle = "The Wall";
+      Record newRecord = new Record(recordTitle);
+      string result = newRecord.RecordTitle;
+      Assert.AreEqual(result, newRecord.RecordTitle);
+    }
   }
 }
