@@ -22,12 +22,22 @@ namespace MusicOrganizer.Tests
     }
 
     [TestMethod]
-    public void Record_ReturnRecordTitle_String()
+    public void Record_GetRecordTitle_String()
     {
       string recordTitle = "The Wall";
       Record newRecord = new Record(recordTitle);
       string result = newRecord.RecordTitle;
       Assert.AreEqual(result, newRecord.RecordTitle);
+    }
+     [TestMethod]
+    public void Record_SetUpdatedRecordTitle_String()
+    {
+      string recordTitle = "The Wall";
+      Record newRecord = new Record(recordTitle);
+      string newTitle = "Dark Side of the Moon";
+      newRecord.RecordTitle = newTitle;
+      string result = newRecord.RecordTitle;
+      Assert.AreEqual(newTitle, result);
     }
   }
 }
